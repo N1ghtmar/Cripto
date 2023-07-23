@@ -16,7 +16,8 @@ class PKC:  # define a instâcia da classe
         seed(self.h_key)    # ele usa a H-KEY para definir uma seed para toda thread do código
                             # assim, sempre que você usar a seed definida,
                             # vai obter o mesmo resultado pelos metodos da biblioteca random
-        self.e_path = list(printable)[:-5]  # aqui ele pega todos os caracteres printavéis do python e 
+        self.e_path = list(printable[:-5]+'áéóíúÁÉÓÍÚàèòìùÀÒÈÌÙôêâîûÔÂÎÛÊãõÃÕ')  
+                                            # aqui ele pega todos os caracteres printavéis do python e 
         shuffle(self.e_path)                # cria uma lista embaralhando ele
                                             # basicamente o que fazemos a seguir é só uma simples
                                             # cifra de césar utilizando a L-KEY como parametro
